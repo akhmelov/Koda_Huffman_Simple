@@ -28,9 +28,3 @@
 *.app
 
 
-/bin
-/obj
-
-*.cbp
-*.depend
-*.layout
