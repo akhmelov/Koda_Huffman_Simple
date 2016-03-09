@@ -22,3 +22,25 @@
 	<algorithm>
 	"Coder.h"
 
+1457528156 source:/home/wiktor/Koda_Huffman_Simple/main.cpp
+	<iostream>
+	<queue>
+	<map>
+	<climits>
+	<iterator>
+	<algorithm>
+	<iostream>
+	"include/Coder.h"
+	"include/ParametersService.h"
+
+1457523218 /home/wiktor/Koda_Huffman_Simple/include/Coder.h
+
+1457528117 /home/wiktor/Koda_Huffman_Simple/include/ParametersService.h
+	<string>
+
+1457528679 source:/home/wiktor/Koda_Huffman_Simple/src/ParametersService.cpp
+	"ParametersService.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+
