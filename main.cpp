@@ -5,12 +5,12 @@
 #include <iterator>
 #include <algorithm>
 #include <iostream>
-#include "include/Coder.h"
+
 #include "include/ParametersService.h"
+#include "include/SimpleCoder.h"
+#include "include/SimpleDecoder.h"
 
 using namespace std;
-
-#include "include/Coder.h"
 
 int main(int argc, const char* argv[])
 {
@@ -27,8 +27,7 @@ int main(int argc, const char* argv[])
     ///used strategy design template
     HuffmanSimple *huffman;
     Coder coder(parametersService.getInputFileName(), parametersService.getOutputFileName());
-    ///TODO
-    //Decoder decoder; ///TODO
+    Decoder decoder(parametersService.getInputFileName(), parametersService.getOutputFileName());
 
     if(parametersService.getOperationType() == 1U){
         huffman = &coder;
