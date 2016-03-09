@@ -16,9 +16,8 @@ void HuffmanSimple::displayVocabulary()
 {
     for (HuffCodeMap::const_iterator it = codes.begin(); it != codes.end(); ++it)
     {
-        std::cout << it->first << " ";
-        std::copy(it->second.begin(), it->second.end(),
-                  std::ostream_iterator<bool>(std::cout));
-        std::cout << std::endl;
+        cout << it->first << " ";
+        copy(it->second.begin(), it->second.end(), ostream_iterator<bool>(cout));
+        cout << std::endl;
     }
 }

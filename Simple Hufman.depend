@@ -13,7 +13,7 @@
 1457504585 source:/home/akhmelov/home/studia/KODA/Project/Simple Hufman/src/Coder.cpp
 	"Coder.h"
 
-1457529992 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
+1457532242 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
 	<iostream>
 	<queue>
 	<map>
@@ -21,17 +21,17 @@
 	<iterator>
 	<algorithm>
 	<iostream>
-	"include/Coder.h"
 	"include/ParametersService.h"
-	"include/Coder.h"
+	"include/SimpleCoder.h"
+	"include/SimpleDecoder.h"
 
-1457531079 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Coder.h
+1457531910 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Coder.h
 	<iostream>
 	<string>
 	<fstream>
 	"HuffmanSimple.h"
 
-1457531124 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/Coder.cpp
+1457531405 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/Coder.cpp
 	"../include/Coder.h"
 
 1457528885 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/HuffmanCoder.h
@@ -79,7 +79,7 @@
 	<fstream>
 	"Structures.h"
 
-1457529999 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/HuffmanSimple.cpp
+1457531751 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/HuffmanSimple.cpp
 	"HuffmanSimple.h"
 
 1457530897 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Structures.h
@@ -92,4 +92,25 @@
 
 1457530778 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/Structures.cpp
 	"Structures.h"
+
+1457532054 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/Decoder.cpp
+	"../include/Decoder.h"
+
+1457532103 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Decoder.h
+	<HuffmanSimple.h>
+
+1457531910 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/SimpleCoder.h
+	<iostream>
+	<string>
+	<fstream>
+	"HuffmanSimple.h"
+
+1457532103 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/SimpleDecoder.h
+	<HuffmanSimple.h>
+
+1457532216 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleCoder.cpp
+	"../include/SimpleCoder.h"
+
+1457532216 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleDecoder.cpp
+	"../include/SimpleDecoder.h"
 
