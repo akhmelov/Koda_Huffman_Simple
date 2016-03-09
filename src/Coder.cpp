@@ -1,11 +1,21 @@
-#include "Coder.h"
+#include "../include/Coder.h"
 
-Coder::Coder()
+Coder::Coder(string inputFileName, string outFileName): HuffmanCoder(inputFileName, outFileName)
 {
-    //ctor
+
 }
 
 Coder::~Coder()
 {
-    //dtor
+
+}
+
+void Coder::getVocabulary()
+{
+    outputFile  << "Writing this to a file.\n";
+}
+
+void Coder::algorithm()
+{
+    outputFile  << "Writing this to a file.\n";
 }

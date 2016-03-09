@@ -13,12 +13,29 @@
 1457504585 source:/home/akhmelov/home/studia/KODA/Project/Simple Hufman/src/Coder.cpp
 	"Coder.h"
 
-1457504585 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
+1457528239 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
 	<iostream>
 	<queue>
 	<map>
 	<climits>
 	<iterator>
 	<algorithm>
-	"Coder.h"
+	"include/Coder.h"
+
+1457528136 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Coder.h
+	<iostream>
+	<string>
+	<fstream>
+	"HuffmanCoder.h"
+
+1457528136 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/Coder.cpp
+	"../include/Coder.h"
+
+1457528885 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/HuffmanCoder.h
+	<iostream>
+	<string>
+	<fstream>
+
+1457528878 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/HuffmanCoder.cpp
+	"HuffmanCoder.h"
 
