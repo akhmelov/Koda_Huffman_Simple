@@ -79,17 +79,7 @@ void ParametersService::service(int argc, const char* argv[])
         else if(string(argv[i]) == "-out")
         {
             ++i;
-            ifstream fileCheck(string(argv[i]).c_str());
-            if(!fileCheck)	//check if file exists
-            {
-                cout << string(argv[i]) << ": no such file" << endl;
-                exit(-1);
-            }
-            else
-            {
-                outputFileName_ = string(argv[i]);
-            }
-            fileCheck.close();
+            outputFileName_ = string(argv[i]);
             continue;
         }
     }
