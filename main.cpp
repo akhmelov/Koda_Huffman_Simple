@@ -32,7 +32,7 @@ int main(int argc, const char* argv[])
     if(parametersService.getOperationType() == 1U){
         huffman = &coder;
     }else if(parametersService.getOperationType() == 2U){
-
+        huffman = &coder;
     } else {
         cout<< "Unexpected error, type of the coding operation if " << parametersService.getOperationType() << endl;
         exit(-1);

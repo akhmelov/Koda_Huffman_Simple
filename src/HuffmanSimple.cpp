@@ -1,4 +1,4 @@
-#include "HuffmanSimple.h"
+#include "../include/HuffmanSimple.h"
 
 HuffmanSimple::HuffmanSimple(string inputFileName, string outFileName)
 {
