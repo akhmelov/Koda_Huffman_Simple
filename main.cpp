@@ -24,25 +24,24 @@ int main(int argc, const char* argv[])
     else if(parametersService.getOperationType() == 2U)
         cout << "Program mode: decode" << endl;
 
-    int operationType = 1; ///TODO
-    string inputFile = "testToCompress.txt"; ///TODO
-    string outputFile = "testToDecompress.txt"; ///TODO
-
     ///used strategy design template
-    HuffmanCoder *huffmanCoder;
-    Coder coder(inputFile, outputFile);
+    HuffmanSimple *huffman;
+    Coder coder(parametersService.getInputFileName(), parametersService.getOutputFileName());
     ///TODO
     //Decoder decoder; ///TODO
 
-    if(operationType == 1){
-        huffmanCoder = &coder;
+    if(parametersService.getOperationType() == 1U){
+        huffman = &coder;
+    }else if(parametersService.getOperationType() == 2U){
+
+    } else {
+        cout<< "Unexpected error, type of the coding operation if " << parametersService.getOperationType() << endl;
+        exit(-1);
     }
 
-    huffmanCoder -> getVocabulary();
-    huffmanCoder -> displayVocabulary();
-    huffmanCoder -> algorithm();
-
-
+    huffman -> getVocabulary();
+    huffman -> displayVocabulary(); //help method
+    huffman -> algorithm();
 
     return 0;
 }

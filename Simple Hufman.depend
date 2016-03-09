@@ -13,7 +13,7 @@
 1457504585 source:/home/akhmelov/home/studia/KODA/Project/Simple Hufman/src/Coder.cpp
 	"Coder.h"
 
-1457529227 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
+1457529992 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
 	<iostream>
 	<queue>
 	<map>
@@ -25,13 +25,13 @@
 	"include/ParametersService.h"
 	"include/Coder.h"
 
-1457528136 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Coder.h
+1457529982 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Coder.h
 	<iostream>
 	<string>
 	<fstream>
-	"HuffmanCoder.h"
+	"HuffmanSimple.h"
 
-1457528136 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/Coder.cpp
+1457529982 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/Coder.cpp
 	"../include/Coder.h"
 
 1457528885 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/HuffmanCoder.h
@@ -67,9 +67,17 @@
 1457529102 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/ParametersService.h
 	<string>
 
-1457529102 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/ParametersService.cpp
+1457529573 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/ParametersService.cpp
 	"ParametersService.h"
 	<fstream>
 	<iostream>
 	<stdlib.h>
+
+1457529928 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/HuffmanSimple.h
+	<iostream>
+	<string>
+	<fstream>
+
+1457529999 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/HuffmanSimple.cpp
+	"HuffmanSimple.h"
 

@@ -5,11 +5,11 @@
 #include <string>
 #include <fstream>
 
-#include "HuffmanCoder.h"
+#include "HuffmanSimple.h"
 
 using namespace std;
 
-class Coder: public HuffmanCoder
+class Coder: public HuffmanSimple
 {
     public:
         Coder(string inputFileName, string outFileName);

@@ -1,6 +1,6 @@
 #include "../include/Coder.h"
 
-Coder::Coder(string inputFileName, string outFileName): HuffmanCoder(inputFileName, outFileName)
+Coder::Coder(string inputFileName, string outFileName): HuffmanSimple(inputFileName, outFileName)
 {
 
 }
