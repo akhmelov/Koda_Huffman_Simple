@@ -5,11 +5,32 @@
 #include <iterator>
 #include <algorithm>
 
-#include "Coder.h"
+using namespace std;
 
-int main()
+#include "include/Coder.h"
+
+int main(int argc, char* argv[])
 {
-    std::cout<<"Hello world\n";
+
+    int operationType = 1; ///TODO
+    string inputFile = "testToCompress.txt"; ///TODO
+    string outputFile = "testToDecompress.txt"; ///TODO
+
+    ///used strategy design template
+    HuffmanCoder *huffmanCoder;
+    Coder coder(inputFile, outputFile);
+    ///TODO
+    //Decoder decoder; ///TODO
+
+    if(operationType == 1){
+        huffmanCoder = &coder;
+    }
+
+    huffmanCoder -> getVocabulary();
+    huffmanCoder -> displayVocabulary();
+    huffmanCoder -> algorithm();
+
+
 
     return 0;
 }
