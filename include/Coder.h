@@ -20,7 +20,8 @@ class Coder: public HuffmanSimple
         void algorithm(); //Algorithm
     protected:
     private:
-
+        INode* buildTree(const int (&frequencies)[UniqueSymbols]);
+        void generateCodes(const INode* node, const HuffCode& prefix, HuffCodeMap& outCodes);
 };
 
 #endif // CODER_H
