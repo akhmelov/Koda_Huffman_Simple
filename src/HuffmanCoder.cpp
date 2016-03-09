@@ -1,4 +1,4 @@
-#include "HuffmanCoder.h"
+#include "../include/HuffmanCoder.h"
 
 HuffmanCoder::HuffmanCoder(string inputFileName, string outFileName)
 {
