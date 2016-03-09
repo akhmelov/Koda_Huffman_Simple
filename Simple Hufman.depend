@@ -13,7 +13,7 @@
 1457504585 source:/home/akhmelov/home/studia/KODA/Project/Simple Hufman/src/Coder.cpp
 	"Coder.h"
 
-1457532242 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
+1457532363 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
 	<iostream>
 	<queue>
 	<map>
@@ -67,8 +67,8 @@
 1457529102 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/ParametersService.h
 	<string>
 
-1457529573 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/ParametersService.cpp
-	"ParametersService.h"
+1457532363 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/ParametersService.cpp
+	"../include/ParametersService.h"
 	<fstream>
 	<iostream>
 	<stdlib.h>
@@ -79,8 +79,8 @@
 	<fstream>
 	"Structures.h"
 
-1457531751 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/HuffmanSimple.cpp
-	"HuffmanSimple.h"
+1457532363 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/HuffmanSimple.cpp
+	"../include/HuffmanSimple.h"
 
 1457530897 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Structures.h
 	<iostream>
@@ -90,8 +90,10 @@
 	<iterator>
 	<algorithm>
 
-1457530778 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/Structures.cpp
-	"Structures.h"
+1457532363 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/Structures.cpp
+	"../include/Structures.h"
+
+1457531397 D
 
 1457532054 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/Decoder.cpp
 	"../include/Decoder.h"
@@ -100,6 +102,22 @@
 	<HuffmanSimple.h>
 
 1457531910 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/SimpleCoder.h
+
+1457531397 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/main.cpp
+	<iostream>
+	<queue>
+	<map>
+	<climits>
+	<iterator>
+	<algorithm>
+	<iostream>
+	"include/Coder.h"
+	"include/ParametersService.h"
+	"include/Coder.h"
+
+1457531397 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/Coder.h
+
+1457531607 008d7d9dcac96f0751d83754d218f62798b31
 	<iostream>
 	<string>
 	<fstream>
@@ -113,4 +131,46 @@
 
 1457532216 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleDecoder.cpp
 	"../include/SimpleDecoder.h"
+
+1457532216 e/SimpleDecoder.h"
+
+1457531397 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/HuffmanSimple.h
+	<iostream>
+	<string>
+	<fstream>
+	"Structures.h"
+
+1457531397 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/Structures.h
+	<iostream>
+	<queue>
+	<map>
+	<climits>
+	<iterator>
+	<algorithm>
+
+1457531397 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/ParametersService.h
+	<string>
+
+1457531397 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/Coder.cpp
+	"../include/Coder.h"
+
+1457531591 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/HuffmanCoder.cpp
+	"../include/HuffmanCoder.h"
+
+1457531397 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/HuffmanCoder.h
+	<iostream>
+	<string>
+	<fstream>
+
+1457531599 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/HuffmanSimple.cpp
+	"../include/HuffmanSimple.h"
+
+1457531603 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/ParametersService.cpp
+	"../include/ParametersService.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+
+1457531607 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/Structures.cpp
+	"../include/Structures.h"
 
