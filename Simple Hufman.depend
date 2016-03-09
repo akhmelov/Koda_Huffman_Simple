@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1457504585 source:/home/akhmelov/home/studia/KODA/Project/Simple Hufman/main.cpp
+	<iostream>
+	<queue>
+	<map>
+	<climits>
+	<iterator>
+	<algorithm>
+	"Coder.h"
+
+1457504585 /home/akhmelov/home/studia/KODA/Project/Simple Hufman/include/Coder.h
+
+1457504585 source:/home/akhmelov/home/studia/KODA/Project/Simple Hufman/src/Coder.cpp
+	"Coder.h"
+
+1457504585 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
+	<iostream>
+	<queue>
+	<map>
+	<climits>
+	<iterator>
+	<algorithm>
+	"Coder.h"
+
