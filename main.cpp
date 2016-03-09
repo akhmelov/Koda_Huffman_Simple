@@ -42,5 +42,7 @@ int main(int argc, const char* argv[])
     huffman -> displayVocabulary(); //help method
     huffman -> algorithm();
 
+    cout << "Entropy: " << huffman -> countEntropy() << endl;
+
     return 0;
 }
