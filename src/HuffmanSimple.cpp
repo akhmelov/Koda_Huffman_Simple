@@ -14,5 +14,11 @@ HuffmanSimple::~HuffmanSimple()
 
 void HuffmanSimple::displayVocabulary()
 {
-    cout<<"DISPLAY VOCABULARY ()\n";
+    for (HuffCodeMap::const_iterator it = codes.begin(); it != codes.end(); ++it)
+    {
+        std::cout << it->first << " ";
+        std::copy(it->second.begin(), it->second.end(),
+                  std::ostream_iterator<bool>(std::cout));
+        std::cout << std::endl;
+    }
 }

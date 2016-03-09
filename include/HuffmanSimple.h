@@ -5,6 +5,8 @@
 #include <string>
 #include <fstream>
 
+#include "Structures.h"
+
 using namespace std;
 
 class HuffmanSimple
@@ -18,6 +20,7 @@ class HuffmanSimple
         virtual void algorithm() = 0; //Algorithm
 
     protected:
+        HuffCodeMap codes;
         ifstream inputFile;
         ofstream outputFile;
     private:
