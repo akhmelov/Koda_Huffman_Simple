@@ -1,7 +1,7 @@
 #ifndef DECODER_H
 #define DECODER_H
 
-#include <HuffmanSimple.h>
+#include "../include/HuffmanSimple.h"
 
 
 class Decoder: public HuffmanSimple

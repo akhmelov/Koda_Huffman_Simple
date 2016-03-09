@@ -19,7 +19,8 @@ class HuffmanSimple
         void displayVocabulary();
         virtual void algorithm() = 0; //Algorithm
 
-        ///TODO entropier i dlugosc implementacja
+        double countEntropy();
+
 
     protected:
         HuffCodeMap codes;
