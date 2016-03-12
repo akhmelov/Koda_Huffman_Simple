@@ -17,6 +17,7 @@ class INode
 {
     public:
         const int f;
+        bool bit;
 
         virtual ~INode() {}
 
@@ -30,11 +31,14 @@ class InternalNode : public INode
         INode *const left;
         INode *const right;
 
-        InternalNode(INode* c0, INode* c1) : INode(c0->f + c1->f), left(c0), right(c1) {}
+        InternalNode(INode* c0, INode* c1) : INode(c0->f + c1->f), left(c0), right(c1) {
+            left -> bit = false;
+            right -> bit = true;
+        }
         ~InternalNode()
         {
-            delete left;
-            delete right;
+            delete left; //bit == 0
+            delete right; //bit == 1
         }
 };
 
@@ -46,7 +50,7 @@ class LeafNode : public INode
         LeafNode(int f, char c) : INode(f), c(c) {}
 };
 
-struct NodeCmp
+struct NodeCmp //the class for priority queue
 {
     bool operator()(const INode* lhs, const INode* rhs) const { return lhs->f > rhs->f; }
 };

@@ -20,11 +20,13 @@ class HuffmanSimple
         virtual void algorithm() = 0; //Algorithm
 
         ///TODO entropier i dlugosc implementacja
-
+        INode* root; //TODO change to protected
     protected:
         HuffCodeMap codes;
-        ifstream inputFile;
-        ofstream outputFile;
+//        INode* root;
+
+        string inputFileName;
+        string outFileName;
     private:
 };
 

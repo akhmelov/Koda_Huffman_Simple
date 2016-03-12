@@ -11,8 +11,10 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="./Simple_Hufman -code -in /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/testToCompress.txt -out /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/testToDecopress.txt" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +24,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +35,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/HuffmanSimple.h" />
+		<Unit filename="include/ParametersService.h" />
+		<Unit filename="include/SimpleCoder.h" />
+		<Unit filename="include/SimpleDecoder.h" />
+		<Unit filename="include/Structures.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/HuffmanSimple.cpp" />
+		<Unit filename="src/ParametersService.cpp" />
+		<Unit filename="src/SimpleCoder.cpp" />
+		<Unit filename="src/SimpleDecoder.cpp" />
+		<Unit filename="src/Structures.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

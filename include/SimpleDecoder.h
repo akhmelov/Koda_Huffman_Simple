@@ -1,6 +1,8 @@
 #ifndef DECODER_H
 #define DECODER_H
 
+#include <bitset>
+
 #include <HuffmanSimple.h>
 
 
@@ -15,6 +17,8 @@ class Decoder: public HuffmanSimple
         void algorithm(); //Algorithm
     protected:
     private:
+        ifstream inputFile;
+        ofstream outputFile;
 };
 
 #endif // DECODER_H
