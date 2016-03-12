@@ -24,7 +24,7 @@ class Coder: public HuffmanSimple
         ifstream inputFile;
         ofstream outputFile;
         InfFile infFile;
-        int myFrequencies[UniqueSymbols]; //helps the we save the vocabulary in file
+        unsigned long int myFrequencies[UniqueSymbols]; //helps the we save the vocabulary in file
 
         //INode* buildTree(const int (&frequencies)[UniqueSymbols]);
         //void generateCodes(const INode* node, const HuffCode& prefix, HuffCodeMap& outCodes);
