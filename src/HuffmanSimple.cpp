@@ -14,7 +14,7 @@ HuffmanSimple::~HuffmanSimple()
 {
     inputFile.close();
     outputFile.close();
-    ///delete root;  ///Uncomment!!!!!!
+    delete root;
 }
 
 void HuffmanSimple::displayVocabulary()
@@ -25,6 +25,52 @@ void HuffmanSimple::displayVocabulary()
         cout << "[" << (int)it->first << "] ";
         copy(it -> second.begin(), it -> second.end(), ostream_iterator<bool>(cout));
         cout << std::endl;
+    }
+}
+
+
+INode* HuffmanSimple::buildTree(const int (&frequencies)[UniqueSymbols])
+{
+    priority_queue<INode*, std::vector<INode*>, NodeCmp> trees;
+
+    for (int i = 0; i < UniqueSymbols; ++i) //create leafnodes
+    {
+        if(frequencies[i] != 0)
+            trees.push(new LeafNode(frequencies[i], (char)i)); //priority queue, so there are sort data by frequency. The least is first
+    }
+
+    while (trees.size() > 1) //create tree base on leafnodes
+    {
+        INode* childR = trees.top();
+        trees.pop();
+
+        INode* childL = trees.top();
+        trees.pop();
+
+        INode* parent = new InternalNode(childR, childL);
+        trees.push(parent);
+    }
+    return trees.top();
+}
+
+void HuffmanSimple::generateCodes(const INode* node, const HuffCode& prefix, HuffCodeMap& outCodes)
+{
+    if (const LeafNode* lf = dynamic_cast<const LeafNode*>(node)) //the end of tree
+    {
+        outCodes[lf->c] = prefix;
+    }
+
+    else if (const InternalNode* in = dynamic_cast<const InternalNode*>(node))
+    {
+        HuffCode leftPrefix = prefix;
+        leftPrefix.push_back(false);
+        in -> left -> bit = false; //set prefix bit
+        generateCodes(in->left, leftPrefix, outCodes);
+
+        HuffCode rightPrefix = prefix;
+        rightPrefix.push_back(true);
+        in -> right -> bit = true;  //set prefix bit
+        generateCodes(in->right, rightPrefix, outCodes);
     }
 }
 
@@ -68,3 +114,5 @@ double HuffmanSimple::findEffective()
     outputFile.seekp(posOut); //set pointer on the beg
     return effective;
 }
+
+
