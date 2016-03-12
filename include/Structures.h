@@ -16,8 +16,17 @@ typedef std::map<char, HuffCode> HuffCodeMap;
 struct InfFile {
     unsigned int compressDataSize;
     unsigned int compressDataStart;
+    unsigned int sizeOfWord; // size of one word
+    unsigned int wordsStart;
+    unsigned int countWords; //how many words in Huffman vocabulary
 
-    InfFile(): compressDataSize(0), compressDataStart(0) {}
+    InfFile(): compressDataSize(0), compressDataStart(0), sizeOfWord(0), wordsStart(0), countWords(0) {}
+};
+
+struct HuffmanWordFile { //save to file as world from vocabulary
+    char c;
+    unsigned int code; //represent code
+    int sizeOfCode; //size of code (how many bits are important)
 };
 
 class INode

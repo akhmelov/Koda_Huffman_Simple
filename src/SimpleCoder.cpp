@@ -8,6 +8,7 @@ Coder::Coder(string inputFileName, string outFileName): HuffmanSimple(inputFileN
     if(!inputFile.is_open()){cout<<"Error: file " << inputFileName << " is not opened\n"; exit(-1);}
     if(!outputFile.is_open()){cout<<"Error: file " << outFileName << " is not opened\n"; exit(-1);}
 
+    //set information about format of the compression file
     infFile.compressDataStart += sizeof(InfFile);
     outputFile.seekp(infFile.compressDataStart);
 }
@@ -31,14 +32,13 @@ void Coder::getVocabulary()
 
     inputFile.clear(); //set pointer on the begginning
     inputFile.seekg(0, inputFile.beg); //set pointer on the begginning
-/*
-    const char* ptr = "tEST Test";
-    while (*ptr != '\0')
-        ++frequencies[*ptr++];
-*/
+
     root = buildTree(frequencies);
 
     generateCodes(root, HuffCode(), codes);
+
+    //save vocabulary in file
+    saveVocabulary();
 }
 
 void Coder::algorithm()
@@ -50,7 +50,6 @@ void Coder::algorithm()
     int mySize = 1;
     unsigned int totalSize = 0;
 
-    saveVocabulary();
     while (inputFile.good()) {
         HuffCodeMap::const_iterator it = codes.find(c);
         if(it == codes.end())
@@ -78,9 +77,36 @@ void Coder::algorithm()
     saveInfFile();
 }
 
-void Coder::saveVocabulary()
+void Coder::saveVocabulary() //saves vocabulary into files
 {
-    ///TODO
+    int sizeOfByte = sizeof(unsigned int) * 8; //size of unsigned int in bits
+    vector<HuffmanWordFile> worlds; //respresent worlds
+
+    infFile.wordsStart = outputFile.tellp();
+
+    for (HuffCodeMap::const_iterator it = codes.begin(); it != codes.end(); ++it)
+    {
+        unsigned int myByte = 0; //contain Huffnal code
+        int mySize = 1;     //how is long Huffnal code
+        for (HuffCode::const_iterator itb = it -> second.begin(); itb != it -> second.end(); ++itb, mySize++)
+        {
+            myByte |= *itb << (sizeOfByte - mySize);
+        }
+        HuffmanWordFile word;
+        word.c = it->first;
+        word.code = myByte;
+        word.sizeOfCode = mySize - 1; //
+        worlds.push_back(word);
+
+        outputFile.write(reinterpret_cast<const char *>(&word), sizeof(HuffmanWordFile));
+    }
+
+    infFile.sizeOfWord = sizeof(HuffmanWordFile);
+    infFile.countWords = worlds.size();
+
+    infFile.compressDataStart += sizeof(HuffmanWordFile) * worlds.size();
+
+    saveInfFile();
 }
 
 void Coder::saveInfFile()
