@@ -49,6 +49,7 @@ int main(int argc, const char* argv[])
     decoder . algorithm();
 
     cout << "Entropy: " << huffman -> countEntropy() << endl;
+    cout << "(Effectivity) n = " << huffman -> findEffective() << endl;
 
     return 0;
 }

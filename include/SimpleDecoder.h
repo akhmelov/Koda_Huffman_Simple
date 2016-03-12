@@ -17,6 +17,9 @@ class Decoder: public HuffmanSimple
     private:
         ifstream inputFile;
         ofstream outputFile;
+        InfFile infFile;
+
+        void getInfFile();
 };
 
 #endif // DECODER_H
