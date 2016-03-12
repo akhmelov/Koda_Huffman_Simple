@@ -23,10 +23,12 @@ class Coder: public HuffmanSimple
     private:
         ifstream inputFile;
         ofstream outputFile;
+        InfFile infFile;
 
         INode* buildTree(const int (&frequencies)[UniqueSymbols]);
         void generateCodes(const INode* node, const HuffCode& prefix, HuffCodeMap& outCodes);
         void saveVocabulary();
+        void saveInfFile();
 };
 
 #endif // CODER_H

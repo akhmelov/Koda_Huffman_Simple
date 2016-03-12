@@ -13,6 +13,13 @@ const int UniqueSymbols = 1 << CHAR_BIT;
 typedef std::vector<bool> HuffCode;
 typedef std::map<char, HuffCode> HuffCodeMap;
 
+struct InfFile {
+    unsigned int compressDataSize;
+    unsigned int compressDataStart;
+
+    InfFile(): compressDataSize(0), compressDataStart(0) {}
+};
+
 class INode
 {
     public:

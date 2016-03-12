@@ -55,3 +55,16 @@ double HuffmanSimple::countEntropy()
     }
     return entropy;
 }
+
+double HuffmanSimple::findEffective()
+{
+    double effective = 0;
+    unsigned int posIn = inputFile.tellg();
+    unsigned int posOut = outputFile.tellp();
+    inputFile.seekg(0, inputFile.end); //set pointer on the beg
+    outputFile.seekp(0, outputFile.end); //set pointer on the beg
+    effective = ((double)outputFile.tellp() / (double)inputFile.tellg());
+    inputFile.seekg(posIn); //set pointer on the beg
+    outputFile.seekp(posOut); //set pointer on the beg
+    return effective;
+}

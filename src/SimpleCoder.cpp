@@ -7,6 +7,9 @@ Coder::Coder(string inputFileName, string outFileName): HuffmanSimple(inputFileN
 
     if(!inputFile.is_open()){cout<<"Error: file " << inputFileName << " is not opened\n"; exit(-1);}
     if(!outputFile.is_open()){cout<<"Error: file " << outFileName << " is not opened\n"; exit(-1);}
+
+    infFile.compressDataStart += sizeof(InfFile);
+    outputFile.seekp(infFile.compressDataStart);
 }
 
 Coder::~Coder()
@@ -71,13 +74,21 @@ void Coder::algorithm()
     if(mySize != 0){
         outputFile.write((char *)&myByte, 1);
     }
-    outputFile.write(reinterpret_cast<const char *>(&totalSize), sizeof(unsigned int)); // write a size of bytes (when we read the file we should know where is the end of out data)
-    cout << "Saved size: " << totalSize << endl;
+    infFile.compressDataSize = totalSize;
+    saveInfFile();
 }
 
 void Coder::saveVocabulary()
 {
     ///TODO
+}
+
+void Coder::saveInfFile()
+{
+    unsigned int pos = outputFile.tellp();
+    outputFile.seekp(0, outputFile.beg); //set pointer on the beg
+    outputFile.write(reinterpret_cast<const char *>(&infFile), sizeof(InfFile));
+    outputFile.seekp(pos); //set pointer on the beg
 }
 
 void Coder::closeStreams()

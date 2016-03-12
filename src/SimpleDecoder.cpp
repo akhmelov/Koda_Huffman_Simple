@@ -5,10 +5,8 @@ Decoder::Decoder(string inputFileName, string outFileName): HuffmanSimple(inputF
     inputFile.open(outFileName.c_str(), ifstream::binary);
     outputFile.open(inputFileName.c_str(), ofstream::in);
 
-
-
     if(!inputFile.is_open()){cout<<"Error: file " << inputFileName << " is not opened\n"; exit(-1);}
-    //if(!outputFile.is_open()){cout<<"Error: file " << outFileName << " is not opened\n"; exit(-1);}
+    if(!outputFile.is_open()){cout<<"Error: file " << outFileName << " is not opened\n"; exit(-1);}
 }
 
 Decoder::~Decoder()
@@ -19,18 +17,14 @@ Decoder::~Decoder()
 
 void Decoder::getVocabulary()
 {
+    getInfFile();
     ///codes - do tej zmiennej zapisywać kod
 }
 
 void Decoder::algorithm()
 {
-    cout << "======= Decompression ===========>>";
-    inputFile.clear(); //set pointer on the begginning
-    unsigned int totalSizeFromFile = 0, totalSize = 0;
-    inputFile.seekg(-sizeof(unsigned int), inputFile.end); //set pointer on the size of compression data
-    inputFile.read((char *)&totalSizeFromFile, sizeof(unsigned int)); //read the size of compression data
-    inputFile.seekg(0, inputFile.beg); //set pointer on the beg
-    cout << "Total size is: " << totalSizeFromFile << endl;
+    inputFile.seekg(infFile.compressDataStart); //set to start data compress
+    unsigned int totalSizeFromFile = infFile.compressDataSize, totalSize = 0;
     unsigned char myByte = 0;
     inputFile.read((char *)&myByte, 1);
     int sizeOfByte = 8;
@@ -44,7 +38,6 @@ void Decoder::algorithm()
             //std::cout << x;
             //std::cout << " Present size: " << totalSize << endl;
             if(const LeafNode* lf = dynamic_cast<const LeafNode*>(node)){
-                cout << "" << lf -> c << "";
                 ///TODO save to file
                 node = root;
                 mySize--;   //in this situation we aren't iterate by byte
@@ -65,5 +58,12 @@ void Decoder::algorithm()
 
         inputFile.read((char *)&myByte, 1);
     }
-    cout << "<<===== Decompression =========== END " << endl;
+}
+
+void Decoder::getInfFile()
+{
+    unsigned int pos = inputFile.tellg();
+    inputFile.seekg(0, outputFile.beg); //set pointer on the beg
+    inputFile.read((char *)&infFile, sizeof(InfFile)); //read the size of compression data
+    inputFile.seekg(pos); //set pointer on the beg
 }

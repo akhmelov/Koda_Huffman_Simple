@@ -23,6 +23,7 @@ class HuffmanSimple
         INode* root; //TODO change to protected
         ///TODO entropier i dlugosc implementacja
         double countEntropy();
+        double findEffective();
     protected:
         HuffCodeMap codes;
 //        INode* root;
