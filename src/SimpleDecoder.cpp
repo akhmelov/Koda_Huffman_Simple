@@ -18,7 +18,32 @@ Decoder::~Decoder()
 void Decoder::getVocabulary()
 {
     getInfFile();
-    ///codes - do tej zmiennej zapisywać kod
+
+    inputFile.seekg(infFile.wordsStart); //set to start data words
+
+    int sizeOfByte = sizeof(unsigned int) * 8; //size of unsigned int in bits
+    vector<HuffmanWordFile> worlds; //respresent worlds
+    if(infFile.sizeOfWord != sizeof(HuffmanWordFile)){
+        cout << endl << "Error: Unexpected error, the file to decompress isn't appropriate, maybe it's a wrong file or it was create on another OS";
+        exit(-1);
+    }
+
+    for(int n = 0; n < infFile.countWords; n++){
+        HuffmanWordFile word;
+        inputFile.read((char *)&word, infFile.sizeOfWord);
+        cout << "Word -> c: " << word.c << " (" << word.sizeOfCode << ") ";
+
+        unsigned int myByte = word.code;
+        for (int mySize = 1; mySize < sizeOfByte + 1 && mySize != word.sizeOfCode + 1; mySize++) //pass by bits of byte
+        {
+            if((myByte >> (sizeOfByte - mySize)) & 0x01){
+                cout << "1";
+            } else {
+                cout << "0";
+            }
+        }
+        cout << endl;
+    }
 }
 
 void Decoder::algorithm()
@@ -28,7 +53,7 @@ void Decoder::algorithm()
     unsigned char myByte = 0;
     inputFile.read((char *)&myByte, 1);
     int sizeOfByte = 8;
-
+cout << "Word: ";
     const INode *node = root;
     while (inputFile.good())
     {
@@ -38,6 +63,7 @@ void Decoder::algorithm()
             //std::cout << x;
             //std::cout << " Present size: " << totalSize << endl;
             if(const LeafNode* lf = dynamic_cast<const LeafNode*>(node)){
+                cout << lf -> c;
                 ///TODO save to file
                 node = root;
                 mySize--;   //in this situation we aren't iterate by byte
@@ -58,6 +84,7 @@ void Decoder::algorithm()
 
         inputFile.read((char *)&myByte, 1);
     }
+cout << endl;
 }
 
 void Decoder::getInfFile()
