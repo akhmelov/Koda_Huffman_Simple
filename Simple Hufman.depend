@@ -13,7 +13,7 @@
 1457504585 source:/home/akhmelov/home/studia/KODA/Project/Simple Hufman/src/Coder.cpp
 	"Coder.h"
 
-1457720754 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
+1457764597 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
 	<iostream>
 	<queue>
 	<map>
@@ -73,13 +73,14 @@
 	<iostream>
 	<stdlib.h>
 
-1457628178 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/HuffmanSimple.h
+1457764832 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/HuffmanSimple.h
 	<iostream>
 	<string>
 	<fstream>
+	<math.h>
 	"Structures.h"
 
-1457671390 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/HuffmanSimple.cpp
+1457764832 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/HuffmanSimple.cpp
 	"../include/HuffmanSimple.h"
 
 1457626419 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Structures.h
@@ -108,7 +109,7 @@
 	<bitset>
 	"HuffmanSimple.h"
 
-1457531397 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/main.cpp
+1457533755 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/main.cpp
 	<iostream>
 	<queue>
 	<map>
@@ -116,9 +117,9 @@
 	<iterator>
 	<algorithm>
 	<iostream>
-	"include/Coder.h"
 	"include/ParametersService.h"
-	"include/Coder.h"
+	"include/SimpleCoder.h"
+	"include/SimpleDecoder.h"
 
 1457531397 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/Coder.h
 
@@ -128,9 +129,9 @@
 	<fstream>
 	"HuffmanSimple.h"
 
-1457672080 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/SimpleDecoder.h
+1457764767 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/SimpleDecoder.h
 	<bitset>
-	<HuffmanSimple.h>
+	"../include/HuffmanSimple.h"
 
 1457764126 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleCoder.cpp
 	"../include/SimpleCoder.h"
@@ -140,13 +141,13 @@
 
 1457532216 e/SimpleDecoder.h"
 
-1457531397 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/HuffmanSimple.h
+1457533650 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/HuffmanSimple.h
 	<iostream>
 	<string>
 	<fstream>
 	"Structures.h"
 
-1457531397 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/Structures.h
+1457532669 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/Structures.h
 	<iostream>
 	<queue>
 	<map>
@@ -154,29 +155,44 @@
 	<iterator>
 	<algorithm>
 
-1457531397 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/ParametersService.h
+1457532669 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/ParametersService.h
 	<string>
 
 1457531397 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/Coder.cpp
 	"../include/Coder.h"
 
-1457531591 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/HuffmanCoder.cpp
+1457532669 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/HuffmanCoder.cpp
 	"../include/HuffmanCoder.h"
 
-1457531397 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/HuffmanCoder.h
+1457532669 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/HuffmanCoder.h
 	<iostream>
 	<string>
 	<fstream>
 
-1457531599 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/HuffmanSimple.cpp
+1457533677 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/HuffmanSimple.cpp
 	"../include/HuffmanSimple.h"
 
-1457531603 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/ParametersService.cpp
+1457532669 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/ParametersService.cpp
 	"../include/ParametersService.h"
 	<fstream>
 	<iostream>
 	<stdlib.h>
 
-1457531607 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/Structures.cpp
+1457532669 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/Structures.cpp
 	"../include/Structures.h"
+
+1457532669 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/SimpleCoder.h
+	<iostream>
+	<string>
+	<fstream>
+	"HuffmanSimple.h"
+
+1457532729 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/SimpleDecoder.h
+	"../include/HuffmanSimple.h"
+
+1457532669 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/SimpleCoder.cpp
+	"../include/SimpleCoder.h"
+
+1457532669 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/SimpleDecoder.cpp
+	"../include/SimpleDecoder.h"
 

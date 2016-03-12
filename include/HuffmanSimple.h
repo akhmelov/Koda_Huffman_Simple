@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <math.h>
 
 #include "Structures.h"
 
@@ -19,8 +20,9 @@ class HuffmanSimple
         void displayVocabulary();
         virtual void algorithm() = 0; //Algorithm
 
-        ///TODO entropier i dlugosc implementacja
         INode* root; //TODO change to protected
+        ///TODO entropier i dlugosc implementacja
+        double countEntropy();
     protected:
         HuffCodeMap codes;
 //        INode* root;
@@ -28,6 +30,8 @@ class HuffmanSimple
         string inputFileName;
         string outFileName;
     private:
+        ifstream inputFile;
+        ofstream outputFile;
 };
 
 #endif // HUFFMANCODER_H

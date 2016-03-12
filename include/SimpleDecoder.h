@@ -2,9 +2,7 @@
 #define DECODER_H
 
 #include <bitset>
-
-#include <HuffmanSimple.h>
-
+#include "../include/HuffmanSimple.h"
 
 class Decoder: public HuffmanSimple
 {
