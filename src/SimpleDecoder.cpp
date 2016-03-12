@@ -2,11 +2,8 @@
 
 Decoder::Decoder(string inputFileName, string outFileName): HuffmanSimple(inputFileName, outFileName)
 {
-    //inputFile.open(inputFileName.c_str(), ofstream::binary);
-    //outputFile.open(outFileName.c_str(), ifstream::in);
-
-    inputFile.open(outFileName.c_str(), ifstream::binary | ifstream::in | ifstream::out ); ///TODO delete after test
-    //outputFile.open(inputFileName.c_str(), ofstream::in);   ///TODO delete after test
+    inputFile.open(outFileName.c_str(), ifstream::binary);
+    outputFile.open(inputFileName.c_str(), ofstream::in);
 
 
 

@@ -48,5 +48,7 @@ int main(int argc, const char* argv[])
     //decoder . displayVocabulary(); //help method
     decoder . algorithm();
 
+    cout << "Entropy: " << huffman -> countEntropy() << endl;
+
     return 0;
 }
