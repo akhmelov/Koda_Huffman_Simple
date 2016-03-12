@@ -31,7 +31,7 @@ class HuffmanSimple
         string inputFileName;
         string outFileName;
 
-        INode* buildTree(const int (&frequencies)[UniqueSymbols]);
+        INode* buildTree(const unsigned long int (&frequencies)[UniqueSymbols]);
         void generateCodes(const INode* node, const HuffCode& prefix, HuffCodeMap& outCodes);
     private:
         ifstream inputFile;

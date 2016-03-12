@@ -22,14 +22,12 @@ Coder::~Coder()
 void Coder::getVocabulary()
 {
     // Build frequency table
-    int frequencies[UniqueSymbols] = {0};
-    char c = inputFile.get();
+    unsigned long int frequencies[UniqueSymbols] = {0};
+    unsigned char c = inputFile.get();
 
-int n = 0;
     while (inputFile.good()) {
-        ++frequencies[c];   //increamate frequency of symmbol
         ++myFrequencies[c];
-        cout << "n: " << ++n << endl;
+        ++frequencies[c];   //increamate frequency of symmbol
         c = inputFile.get();
     }
 
@@ -46,7 +44,7 @@ int n = 0;
 
 void Coder::algorithm()
 {
-    char c = inputFile.get();
+    unsigned char c = inputFile.get();
 
     unsigned char myByte = 0;
     int sizeOfByte = 8; ///TODO ask how to check it
@@ -82,26 +80,25 @@ void Coder::algorithm()
 
 void Coder::saveVocabulary() //saves vocabulary into files
 {
-    int sizeOfByte = sizeof(unsigned int) * 8; //size of unsigned int in bits
-    vector<HuffmanWordFile> worlds; //respresent worlds
+    vector<HuffmanWordFile> words; //respresent worlds
 
     infFile.wordsStart = outputFile.tellp();
 
     for (int i = 0; i < UniqueSymbols; ++i) //create leafnodes
     {
-        HuffmanWordFile word;
         if(myFrequencies[i] != 0){
+            HuffmanWordFile word;
             word.c = i;
             word.frequency = myFrequencies[i];
             outputFile.write(reinterpret_cast<const char *>(&word), sizeof(HuffmanWordFile));
-            worlds.push_back(word);
+            words.push_back(word);
         }
     }
 
     infFile.sizeOfWord = sizeof(HuffmanWordFile);
-    infFile.countWords = worlds.size();
+    infFile.countWords = words.size();
 
-    infFile.compressDataStart += sizeof(HuffmanWordFile) * worlds.size();
+    infFile.compressDataStart += sizeof(HuffmanWordFile) * words.size();
 
     saveInfFile();
 }

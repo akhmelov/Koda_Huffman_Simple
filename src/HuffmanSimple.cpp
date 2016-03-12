@@ -29,7 +29,7 @@ void HuffmanSimple::displayVocabulary()
 }
 
 
-INode* HuffmanSimple::buildTree(const int (&frequencies)[UniqueSymbols])
+INode* HuffmanSimple::buildTree(const unsigned long int (&frequencies)[UniqueSymbols])
 {
     priority_queue<INode*, std::vector<INode*>, NodeCmp> trees;
 
