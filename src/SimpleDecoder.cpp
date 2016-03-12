@@ -23,27 +23,24 @@ void Decoder::getVocabulary()
 
     int sizeOfByte = sizeof(unsigned int) * 8; //size of unsigned int in bits
     vector<HuffmanWordFile> worlds; //respresent worlds
+    int frequencies[UniqueSymbols] = {0};
+
     if(infFile.sizeOfWord != sizeof(HuffmanWordFile)){
         cout << endl << "Error: Unexpected error, the file to decompress isn't appropriate, maybe it's a wrong file or it was create on another OS";
         exit(-1);
     }
 
-    for(int n = 0; n < infFile.countWords; n++){
+    for(unsigned int n = 0; n < infFile.countWords; n++){
         HuffmanWordFile word;
         inputFile.read((char *)&word, infFile.sizeOfWord);
-        cout << "Word -> c: " << word.c << " (" << word.sizeOfCode << ") ";
-
-        unsigned int myByte = word.code;
-        for (int mySize = 1; mySize < sizeOfByte + 1 && mySize != word.sizeOfCode + 1; mySize++) //pass by bits of byte
-        {
-            if((myByte >> (sizeOfByte - mySize)) & 0x01){
-                cout << "1";
-            } else {
-                cout << "0";
-            }
-        }
+        frequencies[word.c] = word.frequency;
+        cout << "Word -> c: " << word.c << " (" << word.frequency << ") ";
         cout << endl;
     }
+
+    root = buildTree(frequencies);
+
+    generateCodes(root, HuffCode(), codes);
 }
 
 void Decoder::algorithm()

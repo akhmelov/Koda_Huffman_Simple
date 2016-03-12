@@ -1,6 +1,6 @@
 #include "../include/SimpleCoder.h"
 
-Coder::Coder(string inputFileName, string outFileName): HuffmanSimple(inputFileName, outFileName)
+Coder::Coder(string inputFileName, string outFileName): HuffmanSimple(inputFileName, outFileName), myFrequencies({0})
 {
     inputFile.open(inputFileName.c_str(), ifstream::in);
     outputFile.open(outFileName.c_str(), ofstream::binary);
@@ -25,8 +25,11 @@ void Coder::getVocabulary()
     int frequencies[UniqueSymbols] = {0};
     char c = inputFile.get();
 
+int n = 0;
     while (inputFile.good()) {
         ++frequencies[c];   //increamate frequency of symmbol
+        ++myFrequencies[c];
+        cout << "n: " << ++n << endl;
         c = inputFile.get();
     }
 
@@ -84,21 +87,15 @@ void Coder::saveVocabulary() //saves vocabulary into files
 
     infFile.wordsStart = outputFile.tellp();
 
-    for (HuffCodeMap::const_iterator it = codes.begin(); it != codes.end(); ++it)
+    for (int i = 0; i < UniqueSymbols; ++i) //create leafnodes
     {
-        unsigned int myByte = 0; //contain Huffnal code
-        int mySize = 1;     //how is long Huffnal code
-        for (HuffCode::const_iterator itb = it -> second.begin(); itb != it -> second.end(); ++itb, mySize++)
-        {
-            myByte |= *itb << (sizeOfByte - mySize);
-        }
         HuffmanWordFile word;
-        word.c = it->first;
-        word.code = myByte;
-        word.sizeOfCode = mySize - 1; //
-        worlds.push_back(word);
-
-        outputFile.write(reinterpret_cast<const char *>(&word), sizeof(HuffmanWordFile));
+        if(myFrequencies[i] != 0){
+            word.c = i;
+            word.frequency = myFrequencies[i];
+            outputFile.write(reinterpret_cast<const char *>(&word), sizeof(HuffmanWordFile));
+            worlds.push_back(word);
+        }
     }
 
     infFile.sizeOfWord = sizeof(HuffmanWordFile);
@@ -123,6 +120,7 @@ void Coder::closeStreams()
     outputFile.close();
 }
 
+/*
 INode* Coder::buildTree(const int (&frequencies)[UniqueSymbols])
 {
     priority_queue<INode*, std::vector<INode*>, NodeCmp> trees;
@@ -166,4 +164,4 @@ void Coder::generateCodes(const INode* node, const HuffCode& prefix, HuffCodeMap
         in -> right -> bit = true;  //set prefix bit
         generateCodes(in->right, rightPrefix, outCodes);
     }
-}
+}*/
