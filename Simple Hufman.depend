@@ -196,3 +196,71 @@
 1457532669 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/SimpleDecoder.cpp
 	"../include/SimpleDecoder.h"
 
+1457975408 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/main.cpp
+	<iostream>
+	<queue>
+	<map>
+	<climits>
+	<iterator>
+	<algorithm>
+	<iostream>
+	"include/ParametersService.h"
+	"include/SimpleCoder.h"
+	"include/SimpleDecoder.h"
+	"include/SimpleRandomSequenceGenerator.h"
+
+1457973592 /home/wiktor/sem8/koda/Koda_Huffman_Simple/include/ParametersService.h
+	<string>
+
+1457972735 /home/wiktor/sem8/koda/Koda_Huffman_Simple/include/SimpleCoder.h
+	<iostream>
+	<string>
+	<fstream>
+	<bitset>
+	"HuffmanSimple.h"
+
+1457972735 /home/wiktor/sem8/koda/Koda_Huffman_Simple/include/HuffmanSimple.h
+	<iostream>
+	<string>
+	<fstream>
+	<math.h>
+	"Structures.h"
+
+1457972735 /home/wiktor/sem8/koda/Koda_Huffman_Simple/include/Structures.h
+	<iostream>
+	<queue>
+	<map>
+	<climits>
+	<iterator>
+	<algorithm>
+
+1457972735 /home/wiktor/sem8/koda/Koda_Huffman_Simple/include/SimpleDecoder.h
+	<bitset>
+	"../include/HuffmanSimple.h"
+
+1457972735 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/src/HuffmanSimple.cpp
+	"../include/HuffmanSimple.h"
+
+1457974315 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/src/ParametersService.cpp
+	"../include/ParametersService.h"
+	<fstream>
+	<iostream>
+	<string>
+	<stdlib.h>
+
+1457972735 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/src/SimpleCoder.cpp
+	"../include/SimpleCoder.h"
+
+1457972735 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/src/SimpleDecoder.cpp
+	"../include/SimpleDecoder.h"
+
+1457972735 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/src/Structures.cpp
+	"../include/Structures.h"
+
+1457975291 /home/wiktor/sem8/koda/Koda_Huffman_Simple/include/SimpleRandomSequenceGenerator.h
+	<string>
+
+1457976127 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/src/SimpleRandomSequenceGenerator.cpp
+	"SimpleRandomSequenceGenerator.h"
+	<fstream>
+
