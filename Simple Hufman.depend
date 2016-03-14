@@ -13,7 +13,7 @@
 1457504585 source:/home/akhmelov/home/studia/KODA/Project/Simple Hufman/src/Coder.cpp
 	"Coder.h"
 
-1457806604 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
+1457987623 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
 	<iostream>
 	<queue>
 	<map>
@@ -136,7 +136,7 @@
 1457805989 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleCoder.cpp
 	"../include/SimpleCoder.h"
 
-1457806690 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleDecoder.cpp
+1457987623 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleDecoder.cpp
 	"../include/SimpleDecoder.h"
 
 1457532216 e/SimpleDecoder.h"

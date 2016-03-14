@@ -41,12 +41,6 @@ int main(int argc, const char* argv[])
     huffman -> getVocabulary();
     huffman -> displayVocabulary(); //help method
     huffman -> algorithm();
-    coder . closeStreams(); ///todo for test only
-
-    huffman = &decoder;
-    huffman -> getVocabulary();
-    huffman -> displayVocabulary(); //help method
-    huffman -> algorithm();
 
     cout << "Entropy: " << huffman -> countEntropy() << endl;
     cout << "(Effectivity) n = " << huffman -> findEffective() << endl;

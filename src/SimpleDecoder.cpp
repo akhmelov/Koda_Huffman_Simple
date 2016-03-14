@@ -2,9 +2,8 @@
 
 Decoder::Decoder(string inputFileName, string outFileName): HuffmanSimple(inputFileName, outFileName)
 {
-    inputFile.open(outFileName.c_str(), ifstream::binary);
-    //outputFile.open(inputFileName.c_str(), ofstream::in);
-    outputFile.open("/home/akhmelov/Downloads/lena30test.jpg", ofstream::in);
+    inputFile.open(inputFileName.c_str(), ifstream::binary);
+    outputFile.open(outFileName.c_str(), ofstream::in);
 
     if(!inputFile.is_open()){cout<<"Error: file " << inputFileName << " is not opened\n"; exit(-1);}
     if(!outputFile.is_open()){cout<<"Error: file " << outFileName << " is not opened\n"; exit(-1);}
