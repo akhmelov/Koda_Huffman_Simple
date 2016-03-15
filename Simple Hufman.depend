@@ -13,7 +13,7 @@
 1457504585 source:/home/akhmelov/home/studia/KODA/Project/Simple Hufman/src/Coder.cpp
 	"Coder.h"
 
-1457987623 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
+1457989618 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
 	<iostream>
 	<queue>
 	<map>
@@ -24,6 +24,7 @@
 	"include/ParametersService.h"
 	"include/SimpleCoder.h"
 	"include/SimpleDecoder.h"
+	"include/SimpleRandomSequenceGenerator.h"
 
 1457531910 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Coder.h
 	<iostream>
@@ -64,26 +65,27 @@
 	<iostream>
 	<stdlib.h>
 
-1457529102 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/ParametersService.h
+1457989618 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/ParametersService.h
 	<string>
 
-1457532363 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/ParametersService.cpp
+1457989618 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/ParametersService.cpp
 	"../include/ParametersService.h"
 	<fstream>
 	<iostream>
+	<string>
 	<stdlib.h>
 
-1457805263 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/HuffmanSimple.h
+1457989614 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/HuffmanSimple.h
 	<iostream>
 	<string>
 	<fstream>
 	<math.h>
 	"Structures.h"
 
-1457805263 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/HuffmanSimple.cpp
+1457989614 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/HuffmanSimple.cpp
 	"../include/HuffmanSimple.h"
 
-1457806376 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Structures.h
+1457989614 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Structures.h
 	<iostream>
 	<queue>
 	<map>
@@ -102,7 +104,7 @@
 1457532103 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Decoder.h
 	<HuffmanSimple.h>
 
-1457805263 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/SimpleCoder.h
+1457989614 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/SimpleCoder.h
 	<iostream>
 	<string>
 	<fstream>
@@ -133,10 +135,10 @@
 	<bitset>
 	"../include/HuffmanSimple.h"
 
-1457805989 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleCoder.cpp
+1457989614 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleCoder.cpp
 	"../include/SimpleCoder.h"
 
-1457987623 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleDecoder.cpp
+1457989614 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleDecoder.cpp
 	"../include/SimpleDecoder.h"
 
 1457532216 e/SimpleDecoder.h"
@@ -195,4 +197,75 @@
 
 1457532669 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/SimpleDecoder.cpp
 	"../include/SimpleDecoder.h"
+
+1457975408 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/main.cpp
+	<iostream>
+	<queue>
+	<map>
+	<climits>
+	<iterator>
+	<algorithm>
+	<iostream>
+	"include/ParametersService.h"
+	"include/SimpleCoder.h"
+	"include/SimpleDecoder.h"
+	"include/SimpleRandomSequenceGenerator.h"
+
+1457973592 /home/wiktor/sem8/koda/Koda_Huffman_Simple/include/ParametersService.h
+	<string>
+
+1457972735 /home/wiktor/sem8/koda/Koda_Huffman_Simple/include/SimpleCoder.h
+	<iostream>
+	<string>
+	<fstream>
+	<bitset>
+	"HuffmanSimple.h"
+
+1457972735 /home/wiktor/sem8/koda/Koda_Huffman_Simple/include/HuffmanSimple.h
+	<iostream>
+	<string>
+	<fstream>
+	<math.h>
+	"Structures.h"
+
+1457972735 /home/wiktor/sem8/koda/Koda_Huffman_Simple/include/Structures.h
+	<iostream>
+	<queue>
+	<map>
+	<climits>
+	<iterator>
+	<algorithm>
+
+1457972735 /home/wiktor/sem8/koda/Koda_Huffman_Simple/include/SimpleDecoder.h
+	<bitset>
+	"../include/HuffmanSimple.h"
+
+1457972735 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/src/HuffmanSimple.cpp
+	"../include/HuffmanSimple.h"
+
+1457974315 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/src/ParametersService.cpp
+	"../include/ParametersService.h"
+	<fstream>
+	<iostream>
+	<string>
+	<stdlib.h>
+
+1457972735 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/src/SimpleCoder.cpp
+	"../include/SimpleCoder.h"
+
+1457972735 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/src/SimpleDecoder.cpp
+	"../include/SimpleDecoder.h"
+
+1457972735 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/src/Structures.cpp
+	"../include/Structures.h"
+
+1457975291 /home/wiktor/sem8/koda/Koda_Huffman_Simple/include/SimpleRandomSequenceGenerator.h
+	<string>
+
+1457976127 source:/home/wiktor/sem8/koda/Koda_Huffman_Simple/src/SimpleRandomSequenceGenerator.cpp
+	"SimpleRandomSequenceGenerator.h"
+	<fstream>
+
+1457989618 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/SimpleRandomSequenceGenerator.h
+	<string>
 
