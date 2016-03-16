@@ -7,7 +7,7 @@
 
 using namespace std;
 
-ParametersService::ParametersService(): inputFileName_("in"), outputFileName_("out"), operationType_(0U), numOfCharsInAlphabet_(10U), sequenceLength_(1000U) {}
+ParametersService::ParametersService(): inputFileName_("in"), outputFileName_("out"), operationType_(0U), numOfCharsInAlphabet_(10U), sequenceLength_(1000U), mean_(5.0), stdDev_(2.0) {}
 
 string ParametersService::getOutputFileName()
 {
@@ -34,26 +34,36 @@ unsigned int ParametersService::getSequenceLength()
     return sequenceLength_;
 }
 
+float ParametersService::getMean()
+{
+    return mean_;
+}
+
+float ParametersService::getStdDev()
+{
+    return stdDev_;
+}
+
 void ParametersService::printHelp()
 {
     cout << "Help:" << endl << endl;
     cout << "    -code\tcode file" << endl;
     cout << "    \te.g." << endl;
-    cout << "    \t./Simple_Hufman -code -in input_file -out output_file" << endl;
+    cout << "    \t./\"Simple Hufman\" -code -in input_file -out output_file" << endl;
     cout << "          Parameters:" << endl << endl;
     cout << "            -in <file_name>\tinput file name. Default: in"<< endl << endl;
     cout << "            -out <file_name>\toutput file name. Default: out"<< endl << endl;
 
     cout << "    -decode\tdecode file" << endl;
     cout << "    \te.g." << endl;
-    cout << "    \t./Simple_Hufman -code -in input_file -out output_file" << endl;
+    cout << "    \t./\"Simple Hufman\" -decode -in input_file -out output_file" << endl;
     cout << "          Parameters:" << endl << endl;
     cout << "            -in <file_name>\tinput file name. Default: in"<< endl << endl;
     cout << "            -out <file_name>\toutput file name. Default: out"<< endl << endl;
 
     cout << "    -generate_random\tgenerate random sequence and store it in file" << endl;
     cout << "    \te.g." << endl;
-    cout << "    \t./Simple_Hufman -generate_random -n 5 -l 100 -out output_file" << endl;
+    cout << "    \t./\"Simple Hufman\" -generate_random -n 5 -l 100 -out output_file" << endl;
     cout << "          Parameters:" << endl << endl;
     cout << "            -n <integer>\tnum of chars in input alphabet. Default: 10"<< endl << endl;
     cout << "            -l <integer>\tlength of sequence to generate. Default: 1000"<< endl << endl;
@@ -82,6 +92,23 @@ void ParametersService::service(int argc, const char* argv[])
         else if(string(argv[i]) == "-generate_random")
         {
             operationType_ = 3U;
+            continue;
+        }
+        else if(string(argv[i]) == "-generate_normal")
+        {
+            operationType_ = 4U;
+            continue;
+        }
+        else if(string(argv[i]) == "-mean")
+        {
+            ++i;
+            mean_ = atof(argv[i]);
+            continue;
+        }
+        else if(string(argv[i]) == "-std_dev")
+        {
+            ++i;
+            stdDev_ = atof(argv[i]);
             continue;
         }
         else if(string(argv[i]) == "-n")
@@ -121,7 +148,7 @@ void ParametersService::service(int argc, const char* argv[])
     }
     if(operationType_ == 0U)
     {
-        cout << "Program mode not specified, add '-code', '-decode' or 'generate_random' to parameters list." << endl;
+        cout << "Program mode not specified, add '-code', '-decode', 'generate_random', 'generate_normal' to parameters list." << endl;
         exit(-1);
     }
 }

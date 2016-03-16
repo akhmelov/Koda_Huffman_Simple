@@ -18,6 +18,10 @@ public:
 
     unsigned int getNumOfCharsInAlphabet();
 
+    float getMean();
+
+    float getStdDev();
+
     void service(int argc, const char* argv[]);
 
 private:
@@ -26,6 +30,8 @@ private:
     unsigned int operationType_;
     unsigned int numOfCharsInAlphabet_;
     unsigned int sequenceLength_;
+    float mean_;
+    float stdDev_;
 
     void printHelp();
 };
