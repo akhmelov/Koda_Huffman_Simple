@@ -111,7 +111,7 @@
 	<bitset>
 	"HuffmanSimple.h"
 
-1458130196 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/main.cpp
+1458142713 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/main.cpp
 	<iostream>
 	<queue>
 	<map>
@@ -124,6 +124,7 @@
 	"include/SimpleDecoder.h"
 	"include/SimpleRandomSequenceGenerator.h"
 	"include/SimpleNormalSequenceGenerator.h"
+	"include/SimpleLaplaceSequenceGenerator.h"
 
 1457531397 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/Coder.h
 
@@ -160,7 +161,7 @@
 	<iterator>
 	<algorithm>
 
-1458128695 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/ParametersService.h
+1458142765 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/ParametersService.h
 	<string>
 
 1457531397 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/Coder.cpp
@@ -177,7 +178,7 @@
 1458127502 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/HuffmanSimple.cpp
 	"../include/HuffmanSimple.h"
 
-1458129036 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/ParametersService.cpp
+1458142897 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/ParametersService.cpp
 	"../include/ParametersService.h"
 	<fstream>
 	<iostream>
@@ -290,4 +291,13 @@
 
 1458129507 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/SimpleNormalSequenceGenerator.h
 	<string>
+
+1458142538 /home/wiktor/Pulpit/Koda_Huffman_Simple/include/SimpleLaplaceSequenceGenerator.h
+	<string>
+
+1458142509 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/src/SimpleLaplaceSequenceGenerator.cpp
+	"SimpleLaplaceSequenceGenerator.h"
+	<fstream>
+	<boost/random/laplace_distribution.hpp>
+	<boost/random/mersenne_twister.hpp>
 
