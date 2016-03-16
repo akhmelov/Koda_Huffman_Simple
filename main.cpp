@@ -11,6 +11,7 @@
 #include "include/SimpleDecoder.h"
 #include "include/SimpleRandomSequenceGenerator.h"
 #include "include/SimpleNormalSequenceGenerator.h"
+#include "include/SimpleLaplaceSequenceGenerator.h"
 
 
 
@@ -28,13 +29,19 @@ int main(int argc, const char* argv[])
     else if(parametersService.getOperationType() == 2U)
         cout << "\tProgram mode: decode" << endl;
     else if(parametersService.getOperationType() == 3U)
-        cout << "\tProgram mode: generate random sequence" << endl;
+        cout << "\tProgram mode: generate random (uniform distribution) sequence" << endl;
+    else if(parametersService.getOperationType() == 4U)
+        cout << "\tProgram mode: generate random (normal distribution) sequence" << endl;
+    else if(parametersService.getOperationType() == 5U)
+        cout << "\tProgram mode: generate random (Laplace distribution) sequence" << endl;
     cout << "\tInput file name: " << parametersService.getInputFileName() << endl;
     cout << "\tOutput file name: " << parametersService.getOutputFileName() << endl;
     cout << "\tSequence length: " << parametersService.getSequenceLength() << endl;
     cout << "\tNum of chars in alphabet: " << parametersService.getNumOfCharsInAlphabet() << endl;
     cout << "\tMean: " << parametersService.getMean() << endl;
-    cout << "\tStandard deviation: " << parametersService.getStdDev() << endl << endl;
+    cout << "\tStandard deviation: " << parametersService.getStdDev() << endl;
+    cout << "\tLocation: " << parametersService.getLocation() << endl;
+    cout << "\tScale: " << parametersService.getScale() << endl << endl;
 
 
 
@@ -45,6 +52,7 @@ int main(int argc, const char* argv[])
     Decoder decoder(parametersService.getInputFileName(), parametersService.getOutputFileName());
     RandomSequenceGenerator randomSequenceGenerator(parametersService.getNumOfCharsInAlphabet(), parametersService.getSequenceLength(), parametersService.getOutputFileName());
     NormalSequenceGenerator normalSequenceGenerator(parametersService.getSequenceLength(), parametersService.getOutputFileName(), parametersService.getMean(), parametersService.getStdDev());
+    LaplaceSequenceGenerator laplaceSequenceGenerator(parametersService.getSequenceLength(), parametersService.getOutputFileName(), parametersService.getLocation(), parametersService.getScale());
 
 
     if(parametersService.getOperationType() == 1U){
@@ -55,6 +63,8 @@ int main(int argc, const char* argv[])
         return randomSequenceGenerator.generateRandomSequence();
     }else if(parametersService.getOperationType() == 4U){
         return normalSequenceGenerator.generateNormalSequence();
+    }else if(parametersService.getOperationType() == 5U){
+        return laplaceSequenceGenerator.generateLaplaceSequence();
     } else {
         cout<< "Unexpected error, type of the operation is " << parametersService.getOperationType() << endl;
         exit(-1);

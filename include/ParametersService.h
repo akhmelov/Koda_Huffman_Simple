@@ -22,6 +22,10 @@ public:
 
     float getStdDev();
 
+    float getLocation();
+
+    float getScale();
+
     void service(int argc, const char* argv[]);
 
 private:
@@ -32,6 +36,8 @@ private:
     unsigned int sequenceLength_;
     float mean_;
     float stdDev_;
+    float location_;
+    float scale_;
 
     void printHelp();
 };
