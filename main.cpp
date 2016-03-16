@@ -10,6 +10,8 @@
 #include "include/SimpleCoder.h"
 #include "include/SimpleDecoder.h"
 #include "include/SimpleRandomSequenceGenerator.h"
+#include "include/SimpleNormalSequenceGenerator.h"
+
 
 
 using namespace std;
@@ -30,7 +32,9 @@ int main(int argc, const char* argv[])
     cout << "\tInput file name: " << parametersService.getInputFileName() << endl;
     cout << "\tOutput file name: " << parametersService.getOutputFileName() << endl;
     cout << "\tSequence length: " << parametersService.getSequenceLength() << endl;
-    cout << "\tNum of chars in alphabet: " << parametersService.getNumOfCharsInAlphabet() << endl << endl;
+    cout << "\tNum of chars in alphabet: " << parametersService.getNumOfCharsInAlphabet() << endl;
+    cout << "\tMean: " << parametersService.getMean() << endl;
+    cout << "\tStandard deviation: " << parametersService.getStdDev() << endl << endl;
 
 
 
@@ -40,6 +44,7 @@ int main(int argc, const char* argv[])
     Coder coder(parametersService.getInputFileName(), parametersService.getOutputFileName());
     Decoder decoder(parametersService.getInputFileName(), parametersService.getOutputFileName());
     RandomSequenceGenerator randomSequenceGenerator(parametersService.getNumOfCharsInAlphabet(), parametersService.getSequenceLength(), parametersService.getOutputFileName());
+    NormalSequenceGenerator normalSequenceGenerator(parametersService.getSequenceLength(), parametersService.getOutputFileName(), parametersService.getMean(), parametersService.getStdDev());
 
 
     if(parametersService.getOperationType() == 1U){
@@ -48,6 +53,8 @@ int main(int argc, const char* argv[])
         huffman = &decoder;
     }else if(parametersService.getOperationType() == 3U){
         return randomSequenceGenerator.generateRandomSequence();
+    }else if(parametersService.getOperationType() == 4U){
+        return normalSequenceGenerator.generateNormalSequence();
     } else {
         cout<< "Unexpected error, type of the operation is " << parametersService.getOperationType() << endl;
         exit(-1);
