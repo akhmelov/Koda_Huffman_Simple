@@ -301,3 +301,26 @@
 	<boost/random/laplace_distribution.hpp>
 	<boost/random/mersenne_twister.hpp>
 
+1445354185 /home/wiktor/Pulpit/Koda_Huffman_Simple/boost/random/laplace_distribution.hpp
+	<cassert>
+	<istream>
+	<iosfwd>
+	<boost/random/detail/operators.hpp>
+	<boost/random/exponential_distribution.hpp>
+
+1445354185 /home/wiktor/Pulpit/Koda_Huffman_Simple/boost/random/mersenne_twister.hpp
+	<iosfwd>
+	<istream>
+	<stdexcept>
+	<boost/config.hpp>
+	<boost/cstdint.hpp>
+	<boost/integer/integer_mask.hpp>
+	<boost/random/detail/config.hpp>
+	<boost/random/detail/ptr_helper.hpp>
+	<boost/random/detail/seed.hpp>
+	<boost/random/detail/seed_impl.hpp>
+	<boost/random/detail/generator_seed_seq.hpp>
+	<boost/random/detail/polynomial.hpp>
+	<boost/random/detail/disable_warnings.hpp>
+	<boost/random/detail/enable_warnings.hpp>
+
