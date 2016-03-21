@@ -14,7 +14,7 @@ typedef std::vector<bool> HuffCode;
 typedef std::map<char, HuffCode> HuffCodeMap;
 
 struct InfFile {
-    unsigned int compressDataSize;
+    unsigned long int compressDataSize;
     unsigned int compressDataStart;
     unsigned int sizeOfWord; // size of one word
     unsigned int wordsStart;

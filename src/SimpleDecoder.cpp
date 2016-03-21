@@ -59,7 +59,7 @@ cout << "Word: ";
             //std::cout << x;
             //std::cout << " Present size: " << totalSize << endl;
             if(const LeafNode* lf = dynamic_cast<const LeafNode*>(node)){
-                cout << lf -> c;
+                //cout << lf -> c;
                 outputFile << lf -> c;
                 node = root;
                 mySize--;   //in this situation we aren't iterate by byte
