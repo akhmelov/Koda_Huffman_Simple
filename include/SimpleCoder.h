@@ -5,6 +5,7 @@
 #include <string>
 #include <fstream>
 #include <bitset>
+#include <climits>
 
 #include "HuffmanSimple.h"
 
