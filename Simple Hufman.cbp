@@ -11,10 +11,10 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="./Simple_Hufman -code -in /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/out.bmp -out /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/testToDecopress.txt" />
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
-					<Add directory="." />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -32,7 +32,6 @@
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-std=c++0x" />
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
@@ -40,8 +39,6 @@
 		<Unit filename="include/ParametersService.h" />
 		<Unit filename="include/SimpleCoder.h" />
 		<Unit filename="include/SimpleDecoder.h" />
-		<Unit filename="include/SimpleLaplaceSequenceGenerator.h" />
-		<Unit filename="include/SimpleNormalSequenceGenerator.h" />
 		<Unit filename="include/SimpleRandomSequenceGenerator.h" />
 		<Unit filename="include/Structures.h" />
 		<Unit filename="main.cpp" />
@@ -49,8 +46,6 @@
 		<Unit filename="src/ParametersService.cpp" />
 		<Unit filename="src/SimpleCoder.cpp" />
 		<Unit filename="src/SimpleDecoder.cpp" />
-		<Unit filename="src/SimpleLaplaceSequenceGenerator.cpp" />
-		<Unit filename="src/SimpleNormalSequenceGenerator.cpp" />
 		<Unit filename="src/SimpleRandomSequenceGenerator.cpp" />
 		<Unit filename="src/Structures.cpp" />
 		<Extensions>
