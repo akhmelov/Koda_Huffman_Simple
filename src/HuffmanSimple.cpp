@@ -96,10 +96,10 @@ double HuffmanSimple::countEntropy()
     for(map<char, unsigned int>::const_iterator it = charHistogramMap.begin(); it != charHistogramMap.end(); ++it)
     {
         double propability = (double)it->second / (double)numOfChars;
-        double tmpEntropy = propability * log(propability);     //logarytm o podstawie 2, nie wiem czy na pewno 2???
+        double tmpEntropy = propability * (log2(propability));     //logarytm o podstawie 2, nie wiem czy na pewno 2???
         entropy -= tmpEntropy;
     }
-    return entropy;
+    return entropy / 8;
 }
 
 double HuffmanSimple::findEffective()

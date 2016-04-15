@@ -44,6 +44,13 @@ void Coder::getVocabulary()
 
 void Coder::algorithm()
 {
+    //srednia dlugosc slowa bitowego
+    int frequencyOutputWord[UCHAR_MAX] = {0};
+    int lengthOutputWord[UCHAR_MAX] = {0};
+    int sizeOutputWord = 0;
+    int totalCountOutputWords = 0;
+    //end srednia dlugosc slowa bitowego
+
     unsigned char c = inputFile.get();
 
     unsigned char myByte = 0;
@@ -61,6 +68,10 @@ void Coder::algorithm()
 
         for (HuffCode::const_iterator itb = it -> second.begin(); itb != it -> second.end(); ++itb, mySize++, totalSize++)
         {
+            //srednia dlugosc slowa bitowego
+            sizeOutputWord += 1;
+            //end srednia dlugosc slowa bitowego
+
             if(mySize > sizeOfByte){ //write to file
                 outputFile.write((char *)&myByte, 1);
                 mySize = 1;
@@ -69,13 +80,33 @@ void Coder::algorithm()
             myByte |= *itb << (sizeOfByte - mySize);
         }
 
+        //srednia dlugosc slowa bitowego
+        frequencyOutputWord[c] += 1;
+        lengthOutputWord[c] = sizeOutputWord;
+        totalCountOutputWords += 1;
+        sizeOutputWord = 0;
+        //end srednia dlugosc slowa bitowego
+
         c = inputFile.get();
     }
     if(mySize != 0){
         outputFile.write((char *)&myByte, 1);
+
+        //srednia dlugosc slowa bitowego
+        frequencyOutputWord[c] += 1;
+        lengthOutputWord[c] = sizeOutputWord;
+        totalCountOutputWords += 1;
+        //end srednia dlugosc slowa bitowego
     }
     infFile.compressDataSize = totalSize;
     saveInfFile();
+
+    double middleSumOutputWords = 0;
+    for(int i = 0; i < UCHAR_MAX; i++){
+        cout << "frequencyOutputWord[" << i << "]: " << frequencyOutputWord[i] << " lengthOutputWord[" << i << "]: " << lengthOutputWord[i] << endl;
+        middleSumOutputWords += (double)((double)frequencyOutputWord[i] / (double)totalCountOutputWords) * (double)lengthOutputWord[i];
+    }
+    cout << "Średnia długość słowa bitowego: " << middleSumOutputWords / 8 << endl;
 }
 
 void Coder::saveVocabulary() //saves vocabulary into files
@@ -116,49 +147,3 @@ void Coder::closeStreams()
     inputFile.close();
     outputFile.close();
 }
-
-/*
-INode* Coder::buildTree(const int (&frequencies)[UniqueSymbols])
-{
-    priority_queue<INode*, std::vector<INode*>, NodeCmp> trees;
-
-    for (int i = 0; i < UniqueSymbols; ++i) //create leafnodes
-    {
-        if(frequencies[i] != 0)
-            trees.push(new LeafNode(frequencies[i], (char)i)); //priority queue, so there are sort data by frequency. The least is first
-    }
-
-    while (trees.size() > 1) //create tree base on leafnodes
-    {
-        INode* childR = trees.top();
-        trees.pop();
-
-        INode* childL = trees.top();
-        trees.pop();
-
-        INode* parent = new InternalNode(childR, childL);
-        trees.push(parent);
-    }
-    return trees.top();
-}
-
-void Coder::generateCodes(const INode* node, const HuffCode& prefix, HuffCodeMap& outCodes)
-{
-    if (const LeafNode* lf = dynamic_cast<const LeafNode*>(node)) //the end of tree
-    {
-        outCodes[lf->c] = prefix;
-    }
-
-    else if (const InternalNode* in = dynamic_cast<const InternalNode*>(node))
-    {
-        HuffCode leftPrefix = prefix;
-        leftPrefix.push_back(false);
-        in -> left -> bit = false; //set prefix bit
-        generateCodes(in->left, leftPrefix, outCodes);
-
-        HuffCode rightPrefix = prefix;
-        rightPrefix.push_back(true);
-        in -> right -> bit = true;  //set prefix bit
-        generateCodes(in->right, rightPrefix, outCodes);
-    }
-}*/
