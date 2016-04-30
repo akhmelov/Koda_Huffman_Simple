@@ -1,119 +1,120 @@
 /home/akhmelov/Downloads/KODA_To_check_test_files/laplace_3
      Średnia długość słowa bitowego: 0.20834
      Efektywność według Shannona (entropia / śr. długość) = 0.935963
-     Entropy: 0
+     Entropy: 0.194998
      (Effectivity) n = 0.208457
 /home/akhmelov/Downloads/KODA_To_check_test_files/lena1.png
      Średnia długość słowa bitowego: 0.995109
      Efektywność według Shannona (entropia / śr. długość) = 1.00328
-     Entropy: 0
+     Entropy: 0.998371
      (Effectivity) n = 1.01826
 /home/akhmelov/Downloads/KODA_To_check_test_files/laplace_6
      Średnia długość słowa bitowego: 0.476957
      Efektywność według Shannona (entropia / śr. długość) = 0.988849
-     Entropy: 0
+     Entropy: 0.471639
      (Effectivity) n = 0.477428
 /home/akhmelov/Downloads/KODA_To_check_test_files/normal_6
      Średnia długość słowa bitowego: 0.427862
      Efektywność według Shannona (entropia / śr. długość) = 0.987175
-     Entropy: 0
+     Entropy: 0.422375
      (Effectivity) n = 0.42804
 /home/akhmelov/Downloads/KODA_To_check_test_files/random_3
      Średnia długość słowa bitowego: 0.299958
      Efektywność według Shannona (entropia / śr. długość) = 0.967605
-     Entropy: 0
+     Entropy: 0.290241
      (Effectivity) n = 0.300002
 /home/akhmelov/Downloads/KODA_To_check_test_files/normal_5
      Średnia długość słowa bitowego: 0.428036
      Efektywność według Shannona (entropia / śr. długość) = 0.987251
-     Entropy: 0
+     Entropy: 0.422579
      (Effectivity) n = 0.428717
 /home/akhmelov/Downloads/KODA_To_check_test_files/normal_2
      Średnia długość słowa bitowego: 0.185109
      Efektywność według Shannona (entropia / śr. długość) = 0.839187
-     Entropy: 0
+     Entropy: 0.155341
      (Effectivity) n = 0.185283
 /home/akhmelov/Downloads/KODA_To_check_test_files/random_1
      Średnia długość słowa bitowego: 0.299755
      Efektywność według Shannona (entropia / śr. długość) = 0.968253
-     Entropy: 0
+     Entropy: 0.290239
      (Effectivity) n = 0.300453
 /home/akhmelov/Downloads/KODA_To_check_test_files/laplace_5
      Średnia długość słowa bitowego: 0.476964
      Efektywność według Shannona (entropia / śr. długość) = 0.988947
-     Entropy: 0
+     Entropy: 0.471692
      (Effectivity) n = 0.478552
 /home/akhmelov/Downloads/KODA_To_check_test_files/random_2
      Średnia długość słowa bitowego: 0.299903
      Efektywność według Shannona (entropia / śr. długość) = 0.967781
-     Entropy: 0
+     Entropy: 0.290241
      (Effectivity) n = 0.300078
 /home/akhmelov/Downloads/KODA_To_check_test_files/lena.png
      Średnia długość słowa bitowego: 0.995243
      Efektywność według Shannona (entropia / śr. długość) = 1.00364
-     Entropy: 0
+     Entropy: 0.998869
      (Effectivity) n = 1.0087
 /home/akhmelov/Downloads/KODA_To_check_test_files/random_6
      Średnia długość słowa bitowego: 0.549893
      Efektywność według Shannona (entropia / śr. długość) = 0.982447
-     Entropy: 0
+     Entropy: 0.540241
      (Effectivity) n = 0.550037
 /home/akhmelov/Downloads/KODA_To_check_test_files/laplace_2
      Średnia długość słowa bitowego: 0.208294
      Efektywność według Shannona (entropia / śr. długość) = 0.936268
-     Entropy: 0
+     Entropy: 0.195019
      (Effectivity) n = 0.208708
 /home/akhmelov/Downloads/KODA_To_check_test_files/normal_1
      Średnia długość słowa bitowego: 0.18485
      Efektywność według Shannona (entropia / śr. długość) = 0.838982
-     Entropy: 0
+     Entropy: 0.155086
      (Effectivity) n = 0.185547
 /home/akhmelov/Downloads/KODA_To_check_test_files/laplace_1
      Średnia długość słowa bitowego: 0.208214
      Efektywność według Shannona (entropia / śr. długość) = 0.936498
-     Entropy: 0
+     Entropy: 0.194992
      (Effectivity) n = 0.20966
 /home/akhmelov/Downloads/KODA_To_check_test_files/normal_4
      Średnia długość słowa bitowego: 0.427565
      Efektywność według Shannona (entropia / śr. długość) = 0.987304
-     Entropy: 0
+     Entropy: 0.422137
      (Effectivity) n = 0.430187
 /home/akhmelov/Downloads/KODA_To_check_test_files/random_5
      Średnia długość słowa bitowego: 0.54974
      Efektywność według Shannona (entropia / śr. długość) = 0.982717
-     Entropy: 0
+     Entropy: 0.540239
      (Effectivity) n = 0.550315
 /home/akhmelov/Downloads/KODA_To_check_test_files/normal_3
      Średnia długość słowa bitowego: 0.185003
      Efektywność według Shannona (entropia / śr. długość) = 0.838842
-     Entropy: 0
+     Entropy: 0.155188
      (Effectivity) n = 0.185047
 /home/akhmelov/Downloads/KODA_To_check_test_files/lenaTest4.jpg
      Średnia długość słowa bitowego: 0.99579
      Efektywność według Shannona (entropia / śr. długość) = 0.999709
-     Entropy: 0
+     Entropy: 0.995501
      (Effectivity) n = 1.13401
 /home/akhmelov/Downloads/KODA_To_check_test_files/cropped.png
      Średnia długość słowa bitowego: 0.996368
      Efektywność według Shannona (entropia / śr. długość) = 1.00284
-     Entropy: 0
+     Entropy: 0.999193
      (Effectivity) n = 1.00549
 /home/akhmelov/Downloads/KODA_To_check_test_files/random_4
      Średnia długość słowa bitowego: 0.549502
      Efektywność według Shannona (entropia / śr. długość) = 0.983126
-     Entropy: 0
+     Entropy: 0.54023
      (Effectivity) n = 0.5518
 /home/akhmelov/Downloads/KODA_To_check_test_files/laplace_4
      Średnia długość słowa bitowego: 0.476913
      Efektywność według Shannona (entropia / śr. długość) = 0.988876
-     Entropy: 0
+     Entropy: 0.471608
      (Effectivity) n = 0.48284
-wa bitowego: 0.937378
-     Efektywność według Shannona entropia/Śr. Długość = 0.997087
-     Entropy: 0
+/home/akhmelov/Downloads/KODA_To_check_test_files/lena.bmp
+     Średnia długość słowa bitowego: 0.937378
+     Efektywność według Shannona (entropia / śr. długość) = 0.997087
+     Entropy: 0.934647
      (Effectivity) n = 0.942918
 /home/akhmelov/Downloads/KODA_To_check_test_files/fig7.png
      Średnia długość słowa bitowego: 0.995112
-     Efektywność według Shannona entropia/Śr. Długość = 1.0018
-     Entropy: 0
+     Efektywność według Shannona (entropia / śr. długość) = 1.0018
+     Entropy: 0.996907
      (Effectivity) n = 1.01551

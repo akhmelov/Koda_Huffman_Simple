@@ -84,12 +84,13 @@ int main(int argc, const char* argv[])
 
             huffman -> getVocabulary();
             string averageLength = huffman -> algorithm();
-            double efecShannon = huffman -> countEntropy() / stod (averageLength, &sz);
+            double entropy = huffman -> countEntropy();
+            double efecShannon = entropy / stod (averageLength, &sz);
             outputFile << pathToDirectory << ent->d_name << endl;    cout << pathToDirectory << ent->d_name << endl;
             outputFile << "     Średnia długość słowa bitowego: " << averageLength << endl;   cout << "     Średnia długość słowa bitowego: " << averageLength << endl;
             outputFile << "     Efektywność według Shannona (entropia / śr. długość) = " << efecShannon << endl;
             cout << "     Efektywność według Shannona (entropia / śr. długość) = " << efecShannon << endl;
-            outputFile << "     Entropy: " << huffman -> countEntropy() << endl;   cout << "     Entropy: " << huffman -> countEntropy() << endl;
+            outputFile << "     Entropy: " << entropy << endl;   cout << "     Entropy: " << entropy << endl;
             outputFile << "     (Effectivity) n = " << huffman -> findEffective() << endl; cout << "     (Effectivity) n = " << huffman -> findEffective() << endl;
           }
           closedir (dir);

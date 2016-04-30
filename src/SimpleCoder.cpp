@@ -105,7 +105,7 @@ string Coder::algorithm()
     for(int i = 0; i < UCHAR_MAX; i++){
         averageSumOutputWords += (double)((double)frequencyOutputWord[i] / (double)totalCountOutputWords) * (double)lengthOutputWord[i];
     }
-    cout << "Średnia długość słowa bitowego: " << averageSumOutputWords / 8 << endl;
+    //cout << "Średnia długość słowa bitowego: " << averageSumOutputWords / 8 << endl;
 
     std::ostringstream strs;
     strs << averageSumOutputWords / 8;
