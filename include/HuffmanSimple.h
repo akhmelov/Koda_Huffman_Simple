@@ -18,7 +18,7 @@ class HuffmanSimple
 
         virtual void getVocabulary() = 0;
         void displayVocabulary();
-        virtual void algorithm() = 0; //Algorithm
+        virtual string algorithm() = 0; //Algorithm
 
         INode* root; //TODO change to protected
         ///TODO entropier i dlugosc implementacja

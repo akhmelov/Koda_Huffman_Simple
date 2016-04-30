@@ -39,12 +39,14 @@
 		<Unit filename="include/ParametersService.h" />
 		<Unit filename="include/SimpleCoder.h" />
 		<Unit filename="include/SimpleDecoder.h" />
+		<Unit filename="include/SimpleRandomSequenceGenerator.h" />
 		<Unit filename="include/Structures.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/HuffmanSimple.cpp" />
 		<Unit filename="src/ParametersService.cpp" />
 		<Unit filename="src/SimpleCoder.cpp" />
 		<Unit filename="src/SimpleDecoder.cpp" />
+		<Unit filename="src/SimpleRandomSequenceGenerator.cpp" />
 		<Unit filename="src/Structures.cpp" />
 		<Extensions>
 			<code_completion />

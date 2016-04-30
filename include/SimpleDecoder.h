@@ -12,7 +12,7 @@ class Decoder: public HuffmanSimple
 
         void getVocabulary();
         void displayVocabulary();
-        void algorithm(); //Algorithm
+        string algorithm(); //Algorithm
     protected:
     private:
         ifstream inputFile;

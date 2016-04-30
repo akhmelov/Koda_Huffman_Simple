@@ -42,7 +42,7 @@ void Decoder::getVocabulary()
     generateCodes(root, HuffCode(), codes);
 }
 
-void Decoder::algorithm()
+string Decoder::algorithm()
 {
     inputFile.seekg(infFile.compressDataStart); //set to start data compress
     unsigned int totalSizeFromFile = infFile.compressDataSize, totalSize = 0;
