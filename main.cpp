@@ -62,8 +62,7 @@ int main(int argc, const char* argv[])
     cout << "(Effectivity) n = " << huffman -> findEffective() << endl;
 
 
-    if(parametersService.getOperationType() == 1U){
-        //for all files in one click
+    if(false){ //for all files in one folder
         //char pathToDirectory[256] = ;
         string pathToDirectory = string("/home/akhmelov/Downloads/KODA_To_check_test_files/");
         string pathToOutputDirectory = "/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/outputs/";
