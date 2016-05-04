@@ -12,10 +12,14 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 				<Option parameters="./Simple_Hufman -code -in /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/out.bmp -out /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/testToDecopress.txt" />
 =======
 				<Option parameters="./Simple_Hufman -code -in /home/akhmelov/Downloads/KODA_To_check_test_files/normal_3 -out /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/testToDecopress.txt" />
 >>>>>>> simpleHuffman
+=======
+				<Option parameters="./Simple_Hufman -code -in /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/out.bmp -out /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/testToDecopress.txt" />
+>>>>>>> 0787aad3357f33bfdf009935de94a037222ffa41
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
