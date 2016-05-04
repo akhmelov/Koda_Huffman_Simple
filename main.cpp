@@ -5,6 +5,7 @@
 #include <iterator>
 #include <algorithm>
 #include <iostream>
+#include <dirent.h> //for list of files in directory
 
 #include "include/ParametersService.h"
 #include "include/SimpleCoder.h"
@@ -77,5 +78,44 @@ int main(int argc, const char* argv[])
     cout << "Entropy: " << huffman -> countEntropy() << endl;
     cout << "(Effectivity) n = " << huffman -> findEffective() << endl;
 
+
+    if(false){ //for all files in one folder
+        //char pathToDirectory[256] = ;
+        string pathToDirectory = string("/home/akhmelov/Downloads/KODA_To_check_test_files/");
+        string pathToOutputDirectory = "/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/outputs/";
+        ofstream outputFile;
+        outputFile.open((pathToOutputDirectory + "output.txt").c_str(), ofstream::in);
+        string::size_type sz;     // alias of size_t
+
+        DIR *dir;
+        struct dirent *ent;
+        if ((dir = opendir (pathToDirectory.c_str())) != NULL) {
+          /* print all the files and directories within directory */
+          while ((ent = readdir (dir)) != NULL) {
+            string fileName(ent->d_name);
+            if (fileName == ".." || fileName == ".") continue; //special files in linux
+
+            Coder coder(pathToDirectory + ent->d_name, pathToOutputDirectory + "compressed_" + fileName);
+            huffman = &coder;
+
+            huffman -> getVocabulary();
+            string averageLength = huffman -> algorithm();
+            double entropy = huffman -> countEntropy();
+            double efecShannon = entropy / stod (averageLength, &sz);
+            outputFile << pathToDirectory << ent->d_name << endl;    cout << pathToDirectory << ent->d_name << endl;
+            outputFile << "     Średnia długość słowa bitowego: " << averageLength << endl;   cout << "     Średnia długość słowa bitowego: " << averageLength << endl;
+            outputFile << "     Efektywność według Shannona (entropia / śr. długość) = " << efecShannon << endl;
+            cout << "     Efektywność według Shannona (entropia / śr. długość) = " << efecShannon << endl;
+            outputFile << "     Entropy: " << entropy << endl;   cout << "     Entropy: " << entropy << endl;
+            outputFile << "     (Effectivity) n = " << huffman -> findEffective() << endl; cout << "     (Effectivity) n = " << huffman -> findEffective() << endl;
+          }
+          closedir (dir);
+        } else {
+          /* could not open directory */
+          perror ("");
+          return EXIT_FAILURE;
+        }
+        outputFile.close();
+    }
     return 0;
 }

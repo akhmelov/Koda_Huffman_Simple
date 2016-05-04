@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="src/SimpleCoder.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="3550" topLine="78" />
@@ -9,10 +10,21 @@
 	<File name="src/HuffmanSimple.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="3120" topLine="68" />
+=======
+	<File name="src/SimpleCoder.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3333" topLine="84" />
+		</Cursor>
+	</File>
+	<File name="include/SimpleDecoder.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="261" topLine="0" />
+>>>>>>> simpleHuffman
 		</Cursor>
 	</File>
 	<File name="src/ParametersService.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
+<<<<<<< HEAD
 			<Cursor1 position="2763" topLine="61" />
 		</Cursor>
 	</File>
@@ -44,6 +56,44 @@
 	<File name="src/Structures.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="24" topLine="0" />
+=======
+			<Cursor1 position="2763" topLine="66" />
+		</Cursor>
+	</File>
+	<File name="src/HuffmanSimple.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="264" topLine="75" />
+		</Cursor>
+	</File>
+	<File name="src/SimpleDecoder.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1377" topLine="62" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2414" topLine="56" />
+		</Cursor>
+	</File>
+	<File name="src/Structures.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="24" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include/SimpleCoder.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="178" topLine="7" />
+		</Cursor>
+	</File>
+	<File name="include/Structures.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="903" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="include/HuffmanSimple.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="402" topLine="9" />
+>>>>>>> simpleHuffman
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

@@ -6,6 +6,7 @@
 #include <fstream>
 #include <bitset>
 #include <climits>
+#include <sstream> //for convering double to string
 
 #include "HuffmanSimple.h"
 
@@ -18,7 +19,7 @@ class Coder: public HuffmanSimple
         virtual ~Coder();
 
         void getVocabulary();
-        void algorithm(); //Algorithm
+        string algorithm(); //Algorithm
         void closeStreams();
     protected:
     private:

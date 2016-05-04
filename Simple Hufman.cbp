@@ -11,7 +11,11 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+<<<<<<< HEAD
 				<Option parameters="./Simple_Hufman -code -in /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/out.bmp -out /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/testToDecopress.txt" />
+=======
+				<Option parameters="./Simple_Hufman -code -in /home/akhmelov/Downloads/KODA_To_check_test_files/normal_3 -out /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/testToDecopress.txt" />
+>>>>>>> simpleHuffman
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />

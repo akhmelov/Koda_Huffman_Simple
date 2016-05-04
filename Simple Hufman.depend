@@ -13,7 +13,7 @@
 1457504585 source:/home/akhmelov/home/studia/KODA/Project/Simple Hufman/src/Coder.cpp
 	"Coder.h"
 
-1458758740 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
+1462045502 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/main.cpp
 	<iostream>
 	<queue>
 	<map>
@@ -21,6 +21,7 @@
 	<iterator>
 	<algorithm>
 	<iostream>
+	<dirent.h>
 	"include/ParametersService.h"
 	"include/SimpleCoder.h"
 	"include/SimpleDecoder.h"
@@ -65,24 +66,24 @@
 	<iostream>
 	<stdlib.h>
 
-1458752162 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/ParametersService.h
+1460714080 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/ParametersService.h
 	<string>
 
-1458752162 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/ParametersService.cpp
+1460714080 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/ParametersService.cpp
 	"../include/ParametersService.h"
 	<fstream>
 	<iostream>
 	<string>
 	<stdlib.h>
 
-1458015227 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/HuffmanSimple.h
+1462044658 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/HuffmanSimple.h
 	<iostream>
 	<string>
 	<fstream>
 	<math.h>
 	"Structures.h"
 
-1458131784 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/HuffmanSimple.cpp
+1460964331 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/HuffmanSimple.cpp
 	"../include/HuffmanSimple.h"
 
 1458598697 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Structures.h
@@ -104,12 +105,13 @@
 1457532103 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/Decoder.h
 	<HuffmanSimple.h>
 
-1460710278 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/SimpleCoder.h
+1462044860 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/SimpleCoder.h
 	<iostream>
 	<string>
 	<fstream>
 	<bitset>
 	<climits>
+	<sstream>
 	"HuffmanSimple.h"
 
 1458142713 source:/home/wiktor/Pulpit/Koda_Huffman_Simple/main.cpp
@@ -135,14 +137,14 @@
 	<fstream>
 	"HuffmanSimple.h"
 
-1457805263 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/SimpleDecoder.h
+1462044658 /home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/include/SimpleDecoder.h
 	<bitset>
 	"../include/HuffmanSimple.h"
 
-1460713156 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleCoder.cpp
+1462045633 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleCoder.cpp
 	"../include/SimpleCoder.h"
 
-1458598697 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleDecoder.cpp
+1462044658 source:/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/src/SimpleDecoder.cpp
 	"../include/SimpleDecoder.h"
 
 1457532216 e/SimpleDecoder.h"

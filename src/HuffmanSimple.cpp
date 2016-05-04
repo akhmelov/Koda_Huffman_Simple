@@ -22,7 +22,7 @@ void HuffmanSimple::displayVocabulary()
     for (HuffCodeMap::const_iterator it = codes.begin(); it != codes.end(); ++it)
     {
         cout << it->first << " ";
-        cout << "[" << (int)it->first << "] ";
+        cout << "[" << (int)it->first + 128 << "] ";
         copy(it -> second.begin(), it -> second.end(), ostream_iterator<bool>(cout));
         cout << std::endl;
     }

@@ -42,7 +42,7 @@ void Coder::getVocabulary()
     saveVocabulary();
 }
 
-void Coder::algorithm()
+string Coder::algorithm()
 {
     //srednia dlugosc slowa bitowego
     int frequencyOutputWord[UCHAR_MAX] = {0};
@@ -101,12 +101,15 @@ void Coder::algorithm()
     infFile.compressDataSize = totalSize;
     saveInfFile();
 
-    double middleSumOutputWords = 0;
+    double averageSumOutputWords = 0;
     for(int i = 0; i < UCHAR_MAX; i++){
-        cout << "frequencyOutputWord[" << i << "]: " << frequencyOutputWord[i] << " lengthOutputWord[" << i << "]: " << lengthOutputWord[i] << endl;
-        middleSumOutputWords += (double)((double)frequencyOutputWord[i] / (double)totalCountOutputWords) * (double)lengthOutputWord[i];
+        averageSumOutputWords += (double)((double)frequencyOutputWord[i] / (double)totalCountOutputWords) * (double)lengthOutputWord[i];
     }
-    cout << "Średnia długość słowa bitowego: " << middleSumOutputWords / 8 << endl;
+    //cout << "Średnia długość słowa bitowego: " << averageSumOutputWords / 8 << endl;
+
+    std::ostringstream strs;
+    strs << averageSumOutputWords / 8;
+    return strs.str();
 }
 
 void Coder::saveVocabulary() //saves vocabulary into files
