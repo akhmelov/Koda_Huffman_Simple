@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <iostream>
 #include <dirent.h> //for list of files in directory
+#include <time.h>
 
 #include "include/ParametersService.h"
 #include "include/SimpleCoder.h"
@@ -73,16 +74,20 @@ int main(int argc, const char* argv[])
 
     huffman -> getVocabulary();
     huffman -> displayVocabulary(); //help method
+
+    const clock_t begin_time = clock();
     huffman -> algorithm();
+    string estimatedTime(to_string(float( clock () - begin_time ) /  CLOCKS_PER_SEC));
 
     cout << "Entropy: " << huffman -> countEntropy() << endl;
     cout << "(Effectivity) n = " << huffman -> findEffective() << endl;
+    cout << "Time = " << estimatedTime << endl;
 
 
     if(false){ //for all files in one folder
         //char pathToDirectory[256] = ;
-        string pathToDirectory = string("/home/akhmelov/Downloads/KODA_To_check_test_files/");
-        string pathToOutputDirectory = "/home/akhmelov/home/studia/KODA/Project/Koda_Huffman_Simple/outputs/";
+        string pathToDirectory = string("/home/akhmelov/Downloads/KODA_Karol/test_end (copy)/");
+        string pathToOutputDirectory = "/home/akhmelov/Downloads/KODA_Karol/outputs/";
         ofstream outputFile;
         outputFile.open((pathToOutputDirectory + "output.txt").c_str(), ofstream::in);
         string::size_type sz;     // alias of size_t
@@ -99,7 +104,11 @@ int main(int argc, const char* argv[])
             huffman = &coder;
 
             huffman -> getVocabulary();
+
+            const clock_t begin_time = clock();
             string averageLength = huffman -> algorithm();
+            string estimatedTime(to_string(float( clock () - begin_time ) /  CLOCKS_PER_SEC));
+
             double entropy = huffman -> countEntropy();
             double efecShannon = entropy / stod (averageLength, &sz);
             outputFile << pathToDirectory << ent->d_name << endl;    cout << pathToDirectory << ent->d_name << endl;
@@ -108,6 +117,8 @@ int main(int argc, const char* argv[])
             cout << "     Efektywność według Shannona (entropia / śr. długość) = " << efecShannon << endl;
             outputFile << "     Entropy: " << entropy << endl;   cout << "     Entropy: " << entropy << endl;
             outputFile << "     (Effectivity) n = " << huffman -> findEffective() << endl; cout << "     (Effectivity) n = " << huffman -> findEffective() << endl;
+            outputFile << "     Time: " << estimatedTime << endl;   cout << "     Time: " << estimatedTime << endl;
+
           }
           closedir (dir);
         } else {
